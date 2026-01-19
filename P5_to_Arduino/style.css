@@ -1,0 +1,185 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #1A1515;
+}
+canvas {
+  display: block;
+}
+
+
+#mmImg {
+  background-image: url("../images/MainMenu_Img.png");
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+}
+
+
+/** font */
+.vt323-regular {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+} .fontPx {
+  font-family: "VT323", monospace;
+  font-size: 25px;
+} #csTxt {
+  color: #d9d9d9;
+}
+
+
+
+/** CSS for structuring */
+.dflex {
+  display: flex;
+} .dif {
+  display: inline-flex;
+}
+
+.fdc {
+  flex-direction: column;
+} .fdr {
+  flex-direction: row;
+} .fdcr {
+  flex-direction: column-reverse;
+}
+
+.jcc {
+  justify-content: center;
+} .jcsa {
+  justify-content: space-around;
+} .jcsb {
+  justify-content: space-between;
+}
+
+.aic {
+  align-items: center;
+}
+
+
+/** CSS of buttons */
+.btn {
+  cursor: pointer;
+  color: #C73834;
+
+  background-image: url("../images/pixelart/cravo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  /* border-style: solid;
+  border-width: 2px;
+  border-color: #000;
+  background-color: #000;
+  border-radius: 10px;
+
+  box-shadow: 0px 0px 20px 5px #000;
+
+  color: #fff; */
+
+} .active p {
+  text-shadow: #973636 5px 0px 5px,
+               #973636 -5px 0px 5px,
+               #973636 0px 5px 5px,
+               #973636 0px -5px 5px;
+} .active {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #973636;
+  box-shadow: 0px 0px 20px 5px #973636;
+}
+/* .btn:hover {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #973636;
+  box-shadow: 0px 0px 20px 5px #973636;
+  text-shadow: #973636 5px 0px 5px,
+               #973636 -5px 0px 5px,
+               #973636 0px 5px 5px,
+               #973636 0px -5px 5px;
+} */
+
+.btn p {
+  text-shadow: #000 5px 0px 5px,
+               #000 -5px 0px 5px,
+               #000 0px 5px 5px,
+               #000 0px -5px 5px;
+} .btn p:hover {
+  color: #000;
+  text-shadow: #973636 5px 0px 5px,
+               #973636 -5px 0px 5px,
+               #973636 0px 5px 5px,
+               #973636 0px -5px 5px;
+}
+
+.btnAgain {
+  cursor: pointer;
+
+  border-style: solid;
+  border-width: 2px;
+  border-color: #000;
+  background-color: #000;
+  border-radius: 10px;
+
+  box-shadow: 0px 0px 20px 5px #000;
+
+  color: #fff;             
+} .btnAgain:hover {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #973636;
+  box-shadow: 0px 0px 20px 5px #9736369b;
+  text-shadow: #973636c4 5px 0px 5px,
+               #973636c4 -5px 0px 5px,
+               #973636c4 0px 5px 5px,
+               #973636c4 0px -5px 5px;
+}
+
+.btnCS {
+  cursor: pointer;
+
+  border-style: solid;
+  border-width: 0px;
+
+  color: #fff;             
+} .btnCS {
+  color: #973636;
+} .btnCS:hover {
+  color: #000;
+
+  text-shadow: #973636 5px 0px 5px,
+               #973636 -5px 0px 5px,
+               #973636 0px 5px 5px,
+               #973636 0px -5px 5px;
+}
+
+.line {
+  /* position: absolute; */
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-color: white;
+}
+
+#btnReturn {
+  position: absolute;
+}
+
+
+
+/** CSS for text */
+h1 {
+  color: #fff;
+}
+
+
+
+/** CSS for displays that will be turned on and off */
+#mainMenu, #calibrationScreen, #gameOver, #cutscenesScreen {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+#calibrationScreen, #gameOver, #cutscenesScreen {
+  display: none;
+}

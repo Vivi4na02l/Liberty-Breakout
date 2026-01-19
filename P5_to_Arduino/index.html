@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <script language="javascript" type="text/javascript" src="p5.serialport.js"></script>
+
+    <!-- webcam/hand-activation scripts -->
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <main>
+    </main>
+
+    <!-- div for Game Over -->
+    <div id="gameOver" class="dflex jcc aic" style="background-color: #00000080;">
+      <div id="btnTryAgain" class="dif fdc jcc aic">
+        <p style="padding: 5px; font-size: 25px;" class="fontPx btnAgain">
+          Tentar novamente.
+        </p>
+      </div>
+    </div>
+
+    <!-- div for main menu -->
+    <div id="mainMenu" class="dflex fdc jcsa aic">
+      <div>
+        <p class="fontPx" style="margin: 0; color: #007764; font-size: 125px;">
+          LIBERTY BREAKOUT
+        </p>
+      </div>
+
+      <!-- <img id="mmImg" src="../images/MainMenu_Img.png" width="100%"> -->
+
+      <div id="mmImg"></div>
+
+      <div class="dflex fdc jcc aic">
+        <div id="btnPlay" class="dflex jcc aic btn">
+          <p id="txtPlay" class="fontPx" style="margin: 0;">
+              COMEÇAR
+          </p>
+        </div>
+  
+        <div id="divControls" class="dflex fdr jcsb" style="display: none;">
+          <div id="btnJoystick" class="dflex fdc jcc aic btn active">
+            <img src="../images/Joy.png" width="70%">
+
+            <p style="margin: 0;" class="fontPx">
+              JOYSTICK
+            </p>
+          </div>
+
+          <div id="btnHand" class="dflex fdc jcc aic btn">
+            <img src="../images/Hand.png" width="70%">
+
+            <p style="margin: 0;" class="fontPx">
+              HAND DETECTION
+            </p>
+          </div>
+        </div>
+      </div>  
+    </div>
+
+
+
+    <!-- div for calibration screen -->
+    <div id="calibrationScreen" class="dflex fdc jcsa aic">
+      <div id="btnReturn" class="dflex jcc aic btn">
+        <p style="margin: 0;">
+          ◀ return
+        </p>
+      </div>
+  
+      <h1>Usando uma das mãos, posiciona-a sobre cada uma das linhas, consecutivamente, para calibração.</h1>
+    </div>
+
+
+    <!-- div for cutscenes screen -->
+    <div id="cutscenesScreen" class="dflex fdc jcsa aic" style="background-color: #1A1515;">
+      <img id="csImg" src="../images/cutscenes/cs1-1.png" width="40%">
+
+      <p id="csTxt" class="fontPx">Ano de 1970: Portugal, sob um regime ditatorial, tornara-se um lugar sombrio e opressivo. As ruas ecoavam com os passos cautelosos das pessoas, que viviam com o constante peso do medo. Os prédios governamentais erguiam-se como símbolos de autoridade implacável, enquanto a presença policial recordava a todos o controlo absoluto do regime.</p>
+
+      <div id="cutscenesBtns" class="dflex fdr jcsa aic">
+        <div id="btnNext" class="dif fdc jcc aic">
+          <p style="margin: 0; padding-bottom: 20px; font-size: 25px;" class="fontPx btnCS">
+            SEGUINTE
+          </p>
+
+          <img src="../images/pixelart/cravo.png" width="10%">
+        </div>
+        <div id="btnJump" class="dif fdc jcc aic">
+          <p style="margin: 0; padding-bottom: 20px; font-size: 25px;" class="fontPx btnCS">
+            SALTAR
+          </p>
+
+          <img src="../images/pixelart/cravo.png" width="10%">
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script src="menus.js"></script>
+    <script src="sketch.js"></script>
+  </body>
+</html>
